@@ -1,0 +1,206 @@
+/*Light Blue*/
+body{
+  background-color: #d9ffff;
+}
+/*Centers the webpage*/
+#Shell{
+  text-align: center;
+}
+/*Contains all content in the page*/
+#Container{
+  Background-color: #000000;
+  display: inline-block;
+  width: 100%;
+  max-width: 1200px;
+  min-width: 600px;
+  border-radius: 10px;
+  padding-right: 4px;
+}
+/*Header contains name, address, phone, and email*/
+#Header{
+  Background-color: #ffffff;
+  padding: 0px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding-top: 5px;
+  width: 100%;
+  padding-bottom: 10px;
+  margin: 0px;
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+}
+/*Contains the clickable divs that allow for tab changes*/
+#TabContainer{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+/*Allows the tabs to have a border while staying inline*/
+.TabBorder{
+  float: left;
+  Width: 25%;
+  margin: 0px;
+  cursor: pointer;
+}
+/*Statements Tab for onClick event */
+#TabStatement{
+  background-color: #ffffff;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  width: 100%;
+  opacity: 1;
+}
+/*Education Tab for onClick event*/
+#TabEducation{
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 2px;
+  width: 100%;
+  opacity: .75;
+}
+/*Experiencesn Tab for onClick event*/
+#TabExperience{
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 2px;
+  width: 100%;
+  opacity: .75;
+}
+/*Skills Tab for onClick event*/
+#TabSkills{
+  background-color: #ffffff;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  width: 100%;
+  opacity: .75;
+}
+/* Container that allows seperation between tab and the contents*/
+#BorderContainer{
+  display: inline-block;
+  border-radius: 10px;
+  width: 100%;
+}
+/*Sets background color for the bulk information to be posted*/
+#ContentsContainer{
+  background-color: Grey;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 2px;
+  width: 100%;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+/*Container to differentiate the information as well as padding*/
+#TextContainer{
+  padding: 50px;
+  display: inline-block;
+  background-color: #ffffff;
+  width: 80%;
+  border-radius: 10px;
+}
+/*Div that contains the Statement portion of a resume*/
+#Statement{
+  display: contents;
+}
+/*Div that contains the Education portion of a resume*/
+#Education{
+  display: none;
+}
+/*Div that contains the Experience portion of a resume*/
+#Experience{
+  display: none;
+}
+/*Div that contains the Skills portion of a resume*/
+#Skills{
+  display: none;
+}
+/*Div for innertext, used inplace of <p> for simplicity of implementation*/
+.InnerText{
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: left;
+}
+#MediaContainer{
+  Background-color: #ffffff;
+  padding: 0px;
+  font-size: 20px;
+  border-radius: 10px;
+  padding-top: 10px;
+  width: 100%;
+  padding-bottom: 10px;
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+}
+#MediaLinks{
+
+}
+/*h1-3 font changes*/
+h1{
+  color:#000000;
+  font-size: 36px;
+}
+h2{
+  color: #000000;
+  font-size: 20px;
+  line-height: 26px;
+}
+h3{
+  line-height: 20px;
+  color: #000000;
+  font-size: 18px;
+}
+/*Removes underline*/
+a{
+  text-decoration: none;
+}
+hr{
+  width: 90%;
+}
+/*Accordion*/
+#accordion input {
+	display: none;
+}
+#accordion label {
+	background: #eee;
+	border-radius: .25em;
+	cursor: pointer;
+	display: block;
+	margin-bottom: .125em;
+	padding: .25em 1em;
+	z-index: 20;
+}
+#accordion label:hover {
+	background: #ccc;
+}
+#accordion input:checked + label {
+	background: #ccc;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	color: white;
+	margin-bottom: 0;
+}
+#accordion article {
+	background: #f7f7f7;
+	height:0px;
+	overflow:hidden;
+	z-index:10;
+}
+#accordion article p {
+	padding: 1em;
+}
+#accordion input:checked article {
+}
+#accordion input:checked ~ article {
+	border-bottom-left-radius: .25em;
+	border-bottom-right-radius: .25em;
+	height: auto;
+	margin-bottom: .125em;
+}
