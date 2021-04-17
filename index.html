@@ -10,9 +10,11 @@
   <script>
     //EventListener onClick Tab1
       //Greys out all unclicked tabs/hides div
-    var lastTab = "TabStatement";
+    <!--
+      var lastTab = "TabStatement";
+    //-->
     
-    function onClickTab(var currentTab){
+    function onClickTab(currentTab){
       //Making the Statement Tab as the most prominent
       document.getElementById(currentTab).style.opacity = "1";
       document.getElementById(lastTab).style.opacity = ".75";
