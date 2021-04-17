@@ -10,70 +10,18 @@
   <script>
     //EventListener onClick Tab1
       //Greys out all unclicked tabs/hides div
-    function onClickStatement(){
+    var lastTab = "TabStatement";
+    
+    function onClickTab(var currentTab){
       //Making the Statement Tab as the most prominent
-      document.getElementById('TabStatement').style.opacity = "1";
-      document.getElementById('TabEducation').style.opacity = ".75";
-      document.getElementById('TabExperience').style.opacity = ".75";
-      document.getElementById('TabSkills').style.opacity = ".75";
+      document.getElementById(currentTab).style.opacity = "1";
+      document.getElementById(lastTab).style.opacity = ".75";
 
       //Setting all divs aside from the Statement div to invisible
-      document.getElementById('Education').style.display = "none";
-      document.getElementById('Experience').style.display = "none";
-      document.getElementById('Skills').style.display = "none";
+      document.getElementById(lastTab).style.display = "none";
       //Setting Statement div to visible
-      document.getElementById('Statement').style.display = "contents";
-    }
-
-    //EventListener onClick Tab2
-       //Greys out all unclicked tabs/hides div
-    function onClickEducation(){
-      //Making the Education Tab as the most prominent
-      document.getElementById('TabStatement').style.opacity = ".75";
-      document.getElementById('TabEducation').style.opacity = "1";
-      document.getElementById('TabExperience').style.opacity = ".75";
-      document.getElementById('TabSkills').style.opacity = ".75";
-
-      //Setting all divs aside from the Education div to invisible
-      document.getElementById('Statement').style.display = "none";
-      document.getElementById('Experience').style.display = "none";
-      document.getElementById('Skills').style.display = "none";
-      //Setting the Education div to visible
-      document.getElementById('Education').style.display = "contents";
-    }
-
-    //EventListener onClick Tab3
-      //Greys out all unclicked tabs/hides div
-    function onClickExperience(){
-      //Making the Experience Tab as the most prominent
-      document.getElementById('TabStatement').style.opacity = ".75";
-      document.getElementById('TabEducation').style.opacity = ".75";
-      document.getElementById('TabExperience').style.opacity = "1";
-      document.getElementById('TabSkills').style.opacity = ".75";
-
-      //Setting all divs aside from the Experience div to invisible
-      document.getElementById('Statement').style.display = "none";
-      document.getElementById('Education').style.display = "none";
-      document.getElementById('Skills').style.display = "none";
-      //Setting the Experience div to visible
-      document.getElementById('Experience').style.display = "contents";
-    }
-
-    //EventListener onClick Tab4
-      //Greys out all unclicked tabs/hides div
-    function onClickSkills(){
-      //Making the Skills Tab as the most prominent
-      document.getElementById('TabStatement').style.opacity = ".75";
-      document.getElementById('TabEducation').style.opacity = ".75";
-      document.getElementById('TabExperience').style.opacity = ".75";
-      document.getElementById('TabSkills').style.opacity = "1";
-
-      //Setting all divs aside from the Skills div to invisible
-      document.getElementById('Statement').style.display = "none";
-      document.getElementById('Education').style.display = "none";
-      document.getElementById('Experience').style.display = "none";
-      //Setting the Skills div to visible
-      document.getElementById('Skills').style.display = "contents";
+      document.getElementById(currentTab).style.display = "contents";
+      lastTab = currentTab;
     }
   </script>
 
@@ -99,25 +47,25 @@
         <!--Statement Tab and onClick event-->
         <div id="TabContainer">
           <div class="TabBorder">
-            <div id="TabStatement" onclick="onClickStatement()">
+            <div id="TabStatement" onclick="onClickTab("TabStatement")">
               <h2>Statement</h2>
             </div>
           </div>
           <!--Education Tab and onClick event-->
           <div class="TabBorder">
-            <div id="TabEducation" onclick="onClickEducation()">
+            <div id="TabEducation" onclick="onClickTab("TabEducation")">
               <h2>Education</h2>
             </div>
           </div>
           <!--Experience Tab and onClick event-->
           <div class="TabBorder">
-            <div id="TabExperience" onclick="onClickExperience()">
+            <div id="TabExperience" onclick="onClickTab("TabExperience")">
               <h2>Experience</h2>
             </div>
           </div>
           <!--Skills Tab and onClick event-->
           <div class="TabBorder">
-            <div id="TabSkills" onclick="onClickSkills()">
+            <div id="TabSkills" onclick="onClickTab("TabSkills")">
               <h2>Skills</h2>
             </div>
           </div>
