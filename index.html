@@ -11,18 +11,18 @@
     //EventListener onClick Tab1
       //Greys out all unclicked tabs/hides div
     <!--
-      var lastTab = "TabStatement";
+      var last = "Statement";
+      var lastDiv = "Statement";
     //-->
     
-    function onClickTab(currentTab){
+    function onClickTab(current){
       //Making the Statement Tab as the most prominent
-      document.getElementById(currentTab).style.opacity = "1";
-      document.getElementById(lastTab).style.opacity = ".75";
+      document.getElementById("Tab"+last).style.opacity = ".75";
+      document.getElementById("Tab"+current).style.opacity = "1";
 
       //Setting all divs aside from the Statement div to invisible
-      document.getElementById(lastTab).style.display = "none";
-      //Setting Statement div to visible
-      document.getElementById(currentTab).style.display = "contents";
+      document.getElementById(lastDiv).style.display = "none";
+      document.getElementById(current).style.display = "contents";
       lastTab = currentTab;
     }
   </script>
@@ -49,25 +49,25 @@
         <!--Statement Tab and onClick event-->
         <div id="TabContainer">
           <div class="TabBorder">
-            <div id="TabStatement" onclick="onClickTab('TabStatement')">
+            <div id="TabStatement" onclick="onClickTab('Statement')">
               <h2>Statement</h2>
             </div>
           </div>
           <!--Education Tab and onClick event-->
           <div class="TabBorder">
-            <div id="TabEducation" onclick="onClickTab('TabEducation')">
+            <div id="TabEducation" onclick="onClickTab('Education')">
               <h2>Education</h2>
             </div>
           </div>
           <!--Experience Tab and onClick event-->
           <div class="TabBorder">
-            <div id="TabExperience" onclick="onClickTab('TabExperience')">
+            <div id="TabExperience" onclick="onClickTab('Experience')">
               <h2>Experience</h2>
             </div>
           </div>
           <!--Skills Tab and onClick event-->
           <div class="TabBorder">
-            <div id="TabSkills" onclick="onClickTab('TabSkills')">
+            <div id="TabSkills" onclick="onClickTab('Skills')">
               <h2>Skills</h2>
             </div>
           </div>
@@ -92,11 +92,11 @@
                 <hr/>
                 <div class="InnerText">
                   <div>
-                    <input type="checkbox" id="check-1" />
                     <label for="check-1"><h3>Arizona State University, Tempe, Arizona</h3></label>
                     <article>
                       <i>Digital Culture, In Progress</i><br/>
                       <ul>
+                        <li>Capstone Project: <a href="https://github.com/jjliska/capstone.git">GitHub Repository</a> </li>
                         <li> MAT 243, 265 (Calculus 1), 266 (Calculus 2), 267 (Calculus 3)</li>
                         <li> CSE 110, 120, 205, 220, 230, 320, 360</li>
                         <li> Club Activities from August 2014 - September 2016</li>
@@ -110,9 +110,7 @@
                 <h2>Experience</h2>
                 <hr/>
                 <div class="InnerText">
-                  <section id="accordion">
                     <div>
-                      <input type="checkbox" id="check-1_Experience" />
                       <label for="check-1_Experience"><h3>Emerald Computers, Peoria, Arizona</h3></label>
                       <article>
                         <i>Intern</i><br/>
@@ -124,7 +122,6 @@
                         </ul>
                       </article>
                     </div>
-                  </section>
                 </div>
               </div>
               <!--Contents of the Skills portion of a resume-->
