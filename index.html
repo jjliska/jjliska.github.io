@@ -12,7 +12,6 @@
       //Greys out all unclicked tabs/hides div
     <!--
       var last = "Statement";
-      var lastDiv = "Statement";
     //-->
     
     function onClickTab(current){
@@ -21,9 +20,9 @@
       document.getElementById("Tab"+current).style.opacity = "1";
 
       //Setting all divs aside from the Statement div to invisible
-      document.getElementById(lastDiv).style.display = "none";
+      document.getElementById(last).style.display = "none";
       document.getElementById(current).style.display = "contents";
-      lastTab = currentTab;
+      last = current;
     }
   </script>
 
