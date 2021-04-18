@@ -206,14 +206,15 @@ hr{
 }
 
 ul {
-  list-style-type: none;
-  /*use padding to move list item from left to right*/
-  padding-left: 1em;
+  margin: 0;
 }
-
-ul li:before {
-  content: "–";
-  position: absolute;
-  /*change margin to move dash around*/
-  margin-left: -1em;
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -5px;
+}
+ul.dashed > li:before {
+  content: "-";
+  text-indent: -5px;
 }
